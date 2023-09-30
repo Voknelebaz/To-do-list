@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;700&display=swap");
 html,
 body,
 div,
@@ -239,11 +240,95 @@ template {
   display: none;
 }
 
+.tasklist {
+  background-color: #B2533E;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tasklist__body {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  border-radius: 1.25rem;
+  background-color: #186F65;
+  max-width: 25rem;
+}
+.tasklist__title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 4.5rem;
+  color: #B5CB99;
+}
+.tasklist__input {
+  padding: 2rem;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+}
+.tasklist__button {
+  padding: 2rem;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #B5CB99;
+}
+.tasklist__button:hover {
+  transition: all 0.3s;
+  background-color: #FCE09B;
+}
+@media (max-width: 34.6875rem) {
+  .tasklist__functiobility {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .tasklist__button {
+    padding: 1rem;
+    max-width: 6.25rem;
+  }
+  .tasklist__input {
+    padding: 1rem;
+  }
+}
+.tasklist__list {
+  margin-top: 4rem;
+  cursor: pointer;
+  word-wrap: break-word;
+}
+.tasklist__list li {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  font-family: "Martian Mono", monospace;
 }
 
 .page {

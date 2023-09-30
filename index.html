@@ -6,6 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="/stylesheets/css/main.css">
+
    <title></title>
 </head>
 
@@ -17,17 +18,22 @@
                <h1 class="tasklist__title">
                   TO-DO-LIST
                </h1>
-               <div class="tasklist__functiobality">
-                  <input type="text" class="tasklist__input" placeholder="Enter your task">
-                  <button class="tasklist__button">Add</button>
+               <div class="tasklist__functiobility">
+                  <input id="tasklist__input" type="text" class="tasklist__input" placeholder="Enter your task">
+                 
+                  <span class="tasklist__button" onclick="newElement()" >Add</span>
                </div>
-               <ul class="tasklist__list">
-                  <li class="tasklist__item">123</li>
+               <ul id="tasklist__list" class="tasklist__list">
+                
                </ul>
             </div>
+
          </div>
+         <script src="js/index.js" defer></script>
       </div>
+
    </div>
+
 </body>
 
 </html>

@@ -1,27 +1,98 @@
 .tasklist {
+    background-color: $bg-color;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     // .tasklist__container
     &__container {
     }
     // .tasklist__body
     &__body {
+        display: flex;
+
+        flex-direction: column;
+        padding: 4rem;
+        border-radius: 1.25rem;
+        background-color: $bg-color-tasklist;
+        max-width: 25rem;
     }
     // .tasklist__title
     &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 4.5rem;
+        color: $main-color;
     }
     // .tasklist__functiobality
-    &__functiobality {
+    &__functiobility {
     }
     // .tasklist__input
     &__input {
+        padding: 2rem;
+        border: none;
+        border-radius: 1rem;
+        outline: none;
     }
+
     // .tasklist__button
     &__button {
+        padding: 2rem;
+        border: none;
+        border-radius: 1rem;
+        outline: none;
+        transition: all 0.3s;
+        cursor: pointer;
+        background-color: $main-color;
+    }
+    &__button:hover {
+        transition: all 0.3s;
+        background-color: $btn-hover;
+    }
+    @media (max-width: 34.6875rem) {
+        &__functiobility {
+            display: flex;
+            flex-direction: column;
+
+            align-items: center;
+            gap: 2rem;
+        }
+        &__button {
+            padding: 1rem;
+            max-width: 6.25rem;
+        }
+        &__input {
+            padding: 1rem;
+        }
     }
     // .tasklist__list
     &__list {
+        margin-top: 4rem;
+        cursor: pointer;
+        word-wrap: break-word;
+    }
+    &__list li {
+        position: relative;
+        margin-bottom: 20px;
+        padding: 10px;
     }
     &__item {
     }
 }
 
-
+.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+    
+}
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
